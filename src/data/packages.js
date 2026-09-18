@@ -1,0 +1,45 @@
+export const packages = [
+  {
+    id: "solo-explorer",
+    name: "Solo Explorer",
+    price: 890,
+    cadence: "per person",
+    blurb: "Small-group departures for travellers going it alone.",
+    featured: false,
+    perks: [
+      "Guaranteed departures, no single supplement",
+      "Shared twin room with a matched roommate",
+      "Airport transfers on arrival day",
+      "Local guide for every excursion",
+    ],
+  },
+  {
+    id: "family-escape",
+    name: "Family Escape",
+    price: 1490,
+    cadence: "per person",
+    blurb: "Paced for kids, with room to breathe between activities.",
+    featured: true,
+    perks: [
+      "Under-12s travel at half price",
+      "Family rooms and connecting doors",
+      "Flexible daily start times",
+      "Kid-friendly meals arranged ahead",
+      "24/7 on-trip support line",
+    ],
+  },
+  {
+    id: "signature-private",
+    name: "Signature Private",
+    price: 2780,
+    cadence: "per person",
+    blurb: "Your own guide, your own vehicle, your own pace.",
+    featured: false,
+    perks: [
+      "Fully private itinerary design",
+      "Dedicated driver and guide",
+      "Boutique and heritage stays",
+      "Priority access at key sites",
+    ],
+  },
+];

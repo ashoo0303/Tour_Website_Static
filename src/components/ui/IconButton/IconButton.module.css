@@ -1,0 +1,36 @@
+.iconButton {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--c-ink-700);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition:
+    background-color 0.16s var(--ease),
+    color 0.16s var(--ease),
+    transform 0.16s var(--ease);
+}
+
+.iconButton:hover {
+  background: #fff;
+  transform: scale(1.06);
+}
+
+.plain {
+  background: transparent;
+  border-color: var(--c-line);
+  backdrop-filter: none;
+}
+
+.plain:hover {
+  background: var(--c-surface-alt);
+}
+
+.active {
+  color: var(--c-danger);
+}

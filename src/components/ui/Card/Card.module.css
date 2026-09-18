@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition:
+    transform 0.2s var(--ease),
+    box-shadow 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+}
+
+.flat {
+  box-shadow: none;
+}
+
+.raised {
+  box-shadow: var(--shadow-sm);
+}
+
+.interactive:hover,
+.interactive:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--c-primary-300);
+  box-shadow: var(--shadow-lg);
+}

@@ -1,0 +1,214 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+}
+
+.scrolled {
+  border-bottom-color: var(--c-line);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  min-height: var(--header-h);
+}
+
+/* Brand ------------------------------------------------------------------ */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--c-ink-900);
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--c-primary-500);
+  color: #fff;
+}
+
+/* Desktop nav ------------------------------------------------------------ */
+
+.nav {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+  margin: 0;
+}
+
+.navLink {
+  position: relative;
+  padding-block: var(--sp-2);
+  font-weight: 500;
+  color: var(--c-ink-700);
+  transition: color 0.16s var(--ease);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--c-primary-500);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s var(--ease);
+}
+
+.navLink:hover {
+  color: var(--c-primary-600);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.desktopCta {
+  display: none;
+}
+
+.wishlist {
+  position: relative;
+}
+
+.menuToggle {
+  display: inline-grid;
+}
+
+.count {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  display: grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  padding-inline: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--c-danger);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Mobile drawer ---------------------------------------------------------- */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  border: 0;
+  padding: 0;
+  background: rgba(15, 27, 33, 0.45);
+  animation: fade 0.2s var(--ease);
+  cursor: default;
+}
+
+.drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  width: min(320px, 84vw);
+  padding: var(--sp-5);
+  background: var(--c-surface);
+  box-shadow: var(--shadow-lg);
+  animation: slideIn 0.24s var(--ease);
+}
+
+.drawerHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawerList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  margin: 0;
+}
+
+.drawerLink {
+  display: block;
+  padding: var(--sp-3) var(--sp-3);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  transition: background-color 0.16s var(--ease);
+}
+
+.drawerLink:hover {
+  background: var(--c-surface-alt);
+}
+
+.drawerFoot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.drawerNote {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-500);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+/* Breakpoints ------------------------------------------------------------ */
+
+@media (min-width: 880px) {
+  .nav,
+  .desktopCta {
+    display: block;
+  }
+
+  .menuToggle {
+    display: none;
+  }
+}

@@ -1,0 +1,47 @@
+.card {
+  height: 100%;
+  gap: var(--sp-4);
+  padding: var(--sp-5);
+}
+
+.quoteMark {
+  color: var(--c-primary-100);
+}
+
+.quote {
+  font-size: var(--fs-lg);
+  color: var(--c-ink-700);
+  line-height: 1.55;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-top: auto;
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--c-line);
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-pill);
+  object-fit: cover;
+  flex: none;
+}
+
+.meta {
+  display: grid;
+  gap: 2px;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--c-ink-900);
+}
+
+.trip {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-500);
+}

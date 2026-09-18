@@ -1,0 +1,16 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.resultCount {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-500);
+  margin-bottom: var(--sp-4);
+}
+
+.strong {
+  color: var(--c-ink-900);
+  font-weight: 600;
+}

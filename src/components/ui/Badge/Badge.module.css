@@ -1,0 +1,32 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.neutral {
+  background: var(--c-surface-alt);
+  color: var(--c-ink-700);
+}
+
+.brand {
+  background: var(--c-primary-50);
+  color: var(--c-primary-600);
+}
+
+.accent {
+  background: var(--c-accent-500);
+  color: var(--c-ink-900);
+}
+
+.solid {
+  background: rgba(15, 27, 33, 0.72);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}

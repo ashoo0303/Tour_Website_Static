@@ -1,0 +1,46 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.stars {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.track,
+.fill {
+  display: flex;
+  gap: 2px;
+}
+
+/* The filled layer is clipped to the score percentage, which gives us
+   fractional stars without needing half-star artwork. */
+.fill {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.star {
+  flex: none;
+  fill: var(--c-line);
+}
+
+.fill .star {
+  fill: var(--c-accent-500);
+}
+
+.value {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--c-ink-900);
+}
+
+.count {
+  font-size: var(--fs-sm);
+  color: var(--c-ink-500);
+}
