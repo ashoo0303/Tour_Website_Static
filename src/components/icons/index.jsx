@@ -1,7 +1,4 @@
-/**
- * Inline SVG icon set. Kept as one file so every icon shares the same
- * stroke weight, viewBox and `currentColor` behaviour.
- */
+
 
 function Svg({ children, size = 20, fill = "none", ...rest }) {
   return (
